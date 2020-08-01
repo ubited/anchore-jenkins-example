@@ -29,7 +29,7 @@ node {
       path = path.trim()
       dockerfile = path + "/Dockerfile"
       anchorefile = path + "/anchore_images"
-      anchore engineRetries: '500', name: 'anchore_images'
+      anchore engineRetries: '500', name: "${anchorefile}"
     }
 
     stage('Build') {
